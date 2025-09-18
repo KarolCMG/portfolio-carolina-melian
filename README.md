@@ -14,8 +14,8 @@
 ## 🌐 **URLs del Proyecto:**
 
 - **Portfolio**: [https://carolina-melian-portfolio.netlify.app/](https://carolina-melian-portfolio.netlify.app/)
-- **API**: [https://portfolio-carolina-melian.vercel.app](https://portfolio-carolina-melian.vercel.app)
-- **Documentación**: [https://portfolio-carolina-melian.vercel.app/api-docs](https://portfolio-carolina-melian.vercel.app/api-docs)
+- **API**: [https://portfolio-api-carolina.vercel.app](https://portfolio-api-carolina.vercel.app)
+- **Health Check**: [https://portfolio-api-carolina.vercel.app/api/health](https://portfolio-api-carolina.vercel.app/api/health)
 
 ## 🛠️ **Tecnologías Utilizadas:**
 
