@@ -515,7 +515,7 @@ function createPortfolio() {
         <h2 class="section-title">Sobre mí</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>Soy una desarrolladora frontend apasionada por la tecnología y el aprendizaje continuo. Con más de <strong>6 meses de práctica diaria</strong>, he desarrollado una sólida base en tecnologías modernas.</p>
+            <p>Soy una desarrolladora Full Stack apasionada por la tecnología y el aprendizaje continuo. Con más de <strong>6 meses de práctica diaria</strong>, he desarrollado una sólida base en tecnologías modernas.</p>
             <p>Mi enfoque se centra en crear experiencias de usuario excepcionales utilizando las mejores prácticas de desarrollo y metodologías ágiles. Actualmente estoy expandiendo mis conocimientos hacia el desarrollo fullstack y tecnologías relacionadas con aplicaciones multiplataforma con los sistemas Android e iOS.</p>
             <div class="stats">
               <div class="stat">
