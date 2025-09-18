@@ -356,9 +356,9 @@ class ContactForm {
 // Datos del portfolio
 const portfolioData = {
   name: "Carolina Melián",
-  title: "Desarrolladora Frontend",
+  title: "Desarrolladora Full Stack",
   subtitle: "Apasionada por crear experiencias digitales excepcionales",
-  description: "Desarrolladora frontend con más de 6 meses de práctica diaria, especializada en tecnologías modernas y metodologías ágiles.",
+  description: "Desarrolladora Full Stack con más de 6 meses de práctica diaria, especializada en tecnologías modernas y metodologías ágiles.",
   
   skills: {
     frontend: [
