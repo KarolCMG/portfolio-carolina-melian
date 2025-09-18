@@ -1,0 +1,48 @@
+# Protección del directorio de seguridad
+<Files "*.json">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevenir acceso directo a archivos de configuración
+<Files "security.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Solo permitir acceso a endpoints específicos
+<Files "contact_endpoint.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files "get_csrf_token.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Headers de seguridad adicionales
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+</IfModule>
+
+# Prevenir acceso a archivos sensibles
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Limitar métodos HTTP
+<LimitExcept GET POST>
+    Order Deny,Allow
+    Deny from all
+</LimitExcept>
