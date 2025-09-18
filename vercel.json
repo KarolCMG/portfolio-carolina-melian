@@ -16,7 +16,6 @@
       "dest": "api/server.js"
     }
   ],
-  "outputDirectory": "api",
   "env": {
     "NODE_ENV": "production",
     "JWT_SECRET": "portfolio-secret-key-production",
