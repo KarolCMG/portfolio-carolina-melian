@@ -1,5 +1,3 @@
-import './style.css'
-
 // Inicializar EmailJS - Configuración para producción
 emailjs.init("Ak2VMRgCVLCpSiZTF")
 
@@ -401,31 +399,31 @@ const portfolioData = {
 
   projects: [
     {
-      name: "Tagama - Conectando Experiencias Creativas",
+      name: "🌐 TAGAMA",
       description: "Plataforma web que conecta personas en Tenerife con experiencias creativas reales, cercanas y accesibles. Encuentra tu tribu y desarrolla nuevas habilidades en un entorno comunitario.",
       tech: ["HTML5", "CSS3", "JavaScript", "Vercel", "Responsive Design"],
       github: "https://github.com/KarolCMG/final-project",
       demo: "https://tagama.vercel.app/",
       featured: true,
-      screenshot: "project-screenshots-real/tagama-screenshot.png"
+      screenshot: "/project-screenshots-real/tagama-screenshot.png"
     },
     {
-      name: "TechTrend Innovations",
+      name: "🔥 TechTrend Innovations",
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
       tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
       demo: "https://techtrend-innovations.netlify.app/",
       featured: true,
-      screenshot: "project-screenshots-real/creative-portfolio-screenshot.png"
+      screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
     },
     {
-      name: "Licata Adventures",
+      name: "💼 LICATA ADVENTURES",
       description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
       tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
       demo: "https://licata-adventures.netlify.app/",
       featured: true,
-      screenshot: "project-screenshots-real/taskmaster-screenshot.png"
+      screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
     }
   ],
 
@@ -632,7 +630,7 @@ function createPortfolio() {
         <!-- Proyectos Destacados -->
         <div class="featured-projects">
           <h3 class="subsection-title">
-            <i class="fas fa-star"></i> Proyectos Destacados
+            <i class="fas fa-star"></i> 🚀 MIS PROYECTOS DESPLEGADOS 🚀
           </h3>
           <div class="projects-grid featured-grid">
             ${portfolioData.projects.map(project => `
@@ -706,36 +704,46 @@ function createPortfolio() {
   `
 }
 
-// Inicializar el portfolio
-document.querySelector('#app').innerHTML = createPortfolio()
-
-// Funcionalidad del menú hamburguesa
-const hamburger = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav-menu')
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active')
-  navMenu.classList.toggle('active')
+// Inicializar el portfolio cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  const appElement = document.querySelector('#app')
+  if (appElement) {
+    appElement.innerHTML = createPortfolio()
+  } else {
+    console.error('Elemento #app no encontrado')
+  }
 })
 
-// Smooth scrolling para los enlaces del menú
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault()
-    const targetId = link.getAttribute('href')
-    const targetSection = document.querySelector(targetId)
-    
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+  // Funcionalidad del menú hamburguesa
+  const hamburger = document.querySelector('.hamburger')
+  const navMenu = document.querySelector('.nav-menu')
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active')
+      navMenu.classList.toggle('active')
+    })
+
+    // Smooth scrolling para los enlaces del menú
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const targetId = link.getAttribute('href')
+        const targetSection = document.querySelector(targetId)
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+        
+        // Cerrar menú móvil
+        hamburger.classList.remove('active')
+        navMenu.classList.remove('active')
       })
-    }
-    
-    // Cerrar menú móvil
-    hamburger.classList.remove('active')
-    navMenu.classList.remove('active')
-  })
+    })
+  }
 })
 
 // Animación de las barras de habilidades cuando son visibles
