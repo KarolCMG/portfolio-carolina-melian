@@ -1,11 +1,8 @@
-# Configuración para Netlify
+# Configuración para Netlify - Proyecto estático
 
 [build]
-  command = "npm run build"
+  # No necesitamos build para proyecto estático
   publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
 
 # Redirecciones para SPA
 [[redirects]]
