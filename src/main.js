@@ -635,13 +635,12 @@ function createPortfolio() {
           <div class="projects-grid featured-grid">
             ${portfolioData.projects.map(project => `
               <div class="project-card featured-card">
-                <div class="project-screenshot">
-                  <a href="${project.demo || project.github}" target="_blank" class="screenshot-link">
-                    <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
-                  </a>
-                </div>
                 <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
+                  <p class="project-description">${project.description}</p>
+                  <div class="project-tech">
+                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                  </div>
                   <div class="project-links">
                     ${project.demo ? `
                       <a href="${project.demo}" target="_blank" class="project-link demo-link">
