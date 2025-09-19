@@ -1,21 +1,140 @@
 <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1e2e;stop-opacity:1" />
     </linearGradient>
   </defs>
+  
+  <!-- Fondo -->
   <rect width="100%" height="100%" fill="url(#bg)"/>
-  <text x="200" y="120" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">
-    MovieTime
+  
+  <!-- Barra de búsqueda -->
+  <rect x="20" y="20" width="360" height="40" rx="20" fill="#2a2a3e" stroke="#4a4a5e" stroke-width="1"/>
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="start">
+    Look for a movie
   </text>
-  <text x="200" y="150" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
-    Tu Cine en Casa
+  <circle cx="350" cy="40" r="8" fill="#6366f1"/>
+  <text x="350" y="44" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">🔍</text>
+  
+  <!-- Filtros de género -->
+  <g transform="translate(20, 75)">
+    <rect x="0" y="0" width="50" height="25" rx="12" fill="#6366f1"/>
+    <text x="25" y="16" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Action</text>
+    
+    <rect x="60" y="0" width="50" height="25" rx="12" fill="#2a2a3e"/>
+    <text x="85" y="16" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Comedy</text>
+    
+    <rect x="120" y="0" width="50" height="25" rx="12" fill="#2a2a3e"/>
+    <text x="145" y="16" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Drama</text>
+    
+    <rect x="180" y="0" width="50" height="25" rx="12" fill="#2a2a3e"/>
+    <text x="205" y="16" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Terror</text>
+  </g>
+  
+  <!-- Título NOW PLAYING -->
+  <text x="20" y="120" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">
+    NOW PLAYING
   </text>
-  <text x="200" y="200" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
-    Captura de pantalla pendiente
-  </text>
-  <text x="200" y="220" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">
-    Plataforma de streaming de películas
-  </text>
+  
+  <!-- Grid de películas -->
+  <g transform="translate(20, 130)">
+    <!-- Primera fila -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#6366f1"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🎬</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Demon Slayer</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-07-18</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 7.6</text>
+    </g>
+    
+    <g transform="translate(70, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#ec4899"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🔫</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Weapons</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-08-04</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 7.4</text>
+    </g>
+    
+    <g transform="translate(140, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#ef4444"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">👹</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Conjuring</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-09-05</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 6.6</text>
+    </g>
+    
+    <g transform="translate(210, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#10b981"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🥃</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Nobody 2</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-08-15</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 7.3</text>
+    </g>
+    
+    <g transform="translate(280, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#f59e0b"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🔫</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Naked Gun</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-07-30</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 6.7</text>
+    </g>
+  </g>
+  
+  <!-- Segunda fila -->
+  <g transform="translate(20, 220)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#8b5cf6"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🎵</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">KPop Hunters</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-06-20</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 8.3</text>
+    </g>
+    
+    <g transform="translate(70, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#06b6d4"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🐉</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Dragon</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-06-06</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 8.0</text>
+    </g>
+    
+    <g transform="translate(140, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#f97316"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">💕</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Together</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-07-28</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 7.1</text>
+    </g>
+    
+    <g transform="translate(210, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#64748b"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">❄️</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Ice Road</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-06-27</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 6.5</text>
+    </g>
+    
+    <g transform="translate(280, 0)">
+      <rect x="0" y="0" width="60" height="80" rx="8" fill="url(#card)" stroke="#4a4a5e" stroke-width="1"/>
+      <rect x="5" y="5" width="50" height="40" rx="4" fill="#84cc16"/>
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">🦊</text>
+      <text x="30" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Bad Guys 2</text>
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="7" fill="#888" text-anchor="middle">2025-07-24</text>
+      <text x="30" y="75" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">⭐ 7.8</text>
+    </g>
+  </g>
 </svg>
