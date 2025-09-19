@@ -401,7 +401,6 @@ const portfolioData = {
     {
       name: "🌐 TAGAMA",
       description: "Plataforma web que conecta personas en Tenerife con experiencias creativas reales, cercanas y accesibles. Encuentra tu tribu y desarrolla nuevas habilidades en un entorno comunitario.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Vercel", "Responsive Design"],
       github: "https://github.com/KarolCMG/final-project",
       demo: "https://tagama.vercel.app/",
       featured: true,
@@ -410,7 +409,6 @@ const portfolioData = {
     {
       name: "🔥 TechTrend Innovations",
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
-      tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
       demo: "https://techtrend-innovations.netlify.app/",
       featured: true,
@@ -419,7 +417,6 @@ const portfolioData = {
     {
       name: "💼 LICATA ADVENTURES",
       description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
-      tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
       demo: "https://licata-adventures.netlify.app/",
       featured: true,
