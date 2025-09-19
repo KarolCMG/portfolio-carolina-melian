@@ -643,14 +643,15 @@ function createPortfolio() {
                 <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
                   <div class="project-links">
-                    <a href="${project.github}" target="_blank" class="project-link">
-                      <i class="fab fa-github"></i> Ver Código
-                    </a>
                     ${project.demo ? `
                       <a href="${project.demo}" target="_blank" class="project-link demo-link">
                         <i class="fas fa-external-link-alt"></i> Ver Demo
                       </a>
-                    ` : ''}
+                    ` : `
+                      <a href="${project.github}" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver Código
+                      </a>
+                    `}
                   </div>
                 </div>
               </div>
