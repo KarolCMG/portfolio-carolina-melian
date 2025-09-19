@@ -704,36 +704,46 @@ function createPortfolio() {
   `
 }
 
-// Inicializar el portfolio
-document.querySelector('#app').innerHTML = createPortfolio()
-
-// Funcionalidad del menú hamburguesa
-const hamburger = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav-menu')
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active')
-  navMenu.classList.toggle('active')
+// Inicializar el portfolio cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  const appElement = document.querySelector('#app')
+  if (appElement) {
+    appElement.innerHTML = createPortfolio()
+  } else {
+    console.error('Elemento #app no encontrado')
+  }
 })
 
-// Smooth scrolling para los enlaces del menú
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault()
-    const targetId = link.getAttribute('href')
-    const targetSection = document.querySelector(targetId)
-    
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+  // Funcionalidad del menú hamburguesa
+  const hamburger = document.querySelector('.hamburger')
+  const navMenu = document.querySelector('.nav-menu')
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active')
+      navMenu.classList.toggle('active')
+    })
+
+    // Smooth scrolling para los enlaces del menú
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const targetId = link.getAttribute('href')
+        const targetSection = document.querySelector(targetId)
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+        
+        // Cerrar menú móvil
+        hamburger.classList.remove('active')
+        navMenu.classList.remove('active')
       })
-    }
-    
-    // Cerrar menú móvil
-    hamburger.classList.remove('active')
-    navMenu.classList.remove('active')
-  })
+    })
+  }
 })
 
 // Animación de las barras de habilidades cuando son visibles
