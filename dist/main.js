@@ -353,7 +353,7 @@ class ContactForm {
   }
 }
 
-// Datos del portfolio
+// Datos del portfolio - Actualizado con GitHub Pages
 const portfolioData = {
   name: "Carolina Melián",
   title: "Desarrolladora Full Stack",
