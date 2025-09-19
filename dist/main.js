@@ -1,5 +1,3 @@
-import './style.css'
-
 // Inicializar EmailJS - Configuración para producción
 emailjs.init("Ak2VMRgCVLCpSiZTF")
 
