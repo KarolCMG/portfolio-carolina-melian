@@ -36,3 +36,4 @@ Esta carpeta contiene las imágenes reales de cómo se ven los proyectos en el n
 - Las imágenes se mostrarán automáticamente en el portfolio una vez que las agregues
 - Asegúrate de que las imágenes muestren la página completa y se vean profesionales
 - Si necesitas cambiar los nombres de los archivos, actualiza también las rutas en `src/main.js`
+

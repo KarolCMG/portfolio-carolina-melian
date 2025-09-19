@@ -71,3 +71,4 @@ const newContact = await contactModel.create(contactData);
 
 La base de datos SQLite se crea automáticamente en `portfolio.db` cuando se ejecuta la API por primera vez. Este archivo se genera en la carpeta `database/` y contiene todos los datos persistentes.
 
+
