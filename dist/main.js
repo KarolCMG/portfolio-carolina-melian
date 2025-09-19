@@ -410,20 +410,20 @@ const portfolioData = {
       screenshot: "/project-screenshots-real/tagama-screenshot.png"
     },
     {
-      name: "Creative Studio - Diseño & Desarrollo",
+      name: "TechTrend Innovations",
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
       tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
-      demo: null,
+      demo: "https://techtrend-innovations.netlify.app/",
       featured: true,
       screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
     },
     {
-      name: "TaskMaster Pro - Organiza tu Vida",
+      name: "Licata Adventures",
       description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
       tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
-      demo: null,
+      demo: "https://licata-adventures.netlify.app/",
       featured: true,
       screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
     }
@@ -638,19 +638,22 @@ function createPortfolio() {
             ${portfolioData.projects.map(project => `
               <div class="project-card featured-card">
                 <div class="project-screenshot">
-                  <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
+                  <a href="${project.demo || project.github}" target="_blank" class="screenshot-link">
+                    <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
+                  </a>
                 </div>
                 <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
                   <div class="project-links">
-                    <a href="${project.github}" target="_blank" class="project-link">
-                      <i class="fab fa-github"></i> Ver Código
-                    </a>
                     ${project.demo ? `
                       <a href="${project.demo}" target="_blank" class="project-link demo-link">
                         <i class="fas fa-external-link-alt"></i> Ver Demo
                       </a>
-                    ` : ''}
+                    ` : `
+                      <a href="${project.github}" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver Código
+                      </a>
+                    `}
                   </div>
                 </div>
               </div>
