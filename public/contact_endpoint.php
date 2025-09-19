@@ -8,3 +8,4 @@ header('Access-Control-Allow-Headers: Content-Type');
 // En producción deberías agregar validaciones de seguridad
 echo json_encode(['success' => true, 'message' => 'Validación de seguridad exitosa.']);
 ?>
+

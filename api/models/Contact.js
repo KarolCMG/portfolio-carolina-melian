@@ -181,3 +181,4 @@ class Contact {
 }
 
 module.exports = new Contact();
+

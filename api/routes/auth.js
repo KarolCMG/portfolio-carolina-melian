@@ -2,6 +2,8 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
+const UserModel = require('../database/UserModel');
+const SecurityLogModel = require('../database/SecurityLogModel');
 
 const router = express.Router();
 
@@ -66,9 +68,39 @@ router.post('/login', [
     }
 
     const { username, password } = req.body;
+    const userModel = new UserModel();
+    const securityLogModel = new SecurityLogModel();
 
-    // Verificar credenciales (en producción usar base de datos)
-    if (username !== ADMIN_USER.username || password !== ADMIN_USER.password) {
+    // Buscar usuario en la base de datos
+    const user = await userModel.findByUsername(username);
+    
+    if (!user) {
+      // Log de intento de login fallido
+      await securityLogModel.create({
+        event_type: 'failed_login',
+        ip_address: req.ip,
+        user_agent: req.get('User-Agent'),
+        details: `Intento de login con usuario inexistente: ${username}`
+      });
+
+      return res.status(401).json({
+        success: false,
+        error: 'Credenciales inválidas'
+      });
+    }
+
+    // Verificar contraseña
+    const isValidPassword = await userModel.verifyPassword(password, user.password_hash);
+    
+    if (!isValidPassword) {
+      // Log de intento de login fallido
+      await securityLogModel.create({
+        event_type: 'failed_login',
+        ip_address: req.ip,
+        user_agent: req.get('User-Agent'),
+        details: `Intento de login con contraseña incorrecta para usuario: ${username}`
+      });
+
       return res.status(401).json({
         success: false,
         error: 'Credenciales inválidas'
@@ -78,20 +110,34 @@ router.post('/login', [
     // Generar JWT token
     const token = jwt.sign(
       { 
-        userId: ADMIN_USER.id, 
-        username: ADMIN_USER.username 
+        userId: user.id, 
+        username: user.username,
+        role: user.role
       },
       process.env.JWT_SECRET || 'portfolio-secret-key',
       { expiresIn: '24h' }
     );
+
+    // Actualizar último login
+    await userModel.updateLastLogin(username);
+
+    // Log de login exitoso
+    await securityLogModel.create({
+      event_type: 'successful_login',
+      ip_address: req.ip,
+      user_agent: req.get('User-Agent'),
+      details: `Login exitoso para usuario: ${username}`
+    });
 
     res.json({
       success: true,
       message: 'Login exitoso',
       token,
       user: {
-        id: ADMIN_USER.id,
-        username: ADMIN_USER.username
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role
       }
     });
 

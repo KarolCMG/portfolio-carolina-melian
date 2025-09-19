@@ -1,6 +1,7 @@
 const express = require('express');
 const { body, validationResult } = require('express-validator');
-const Contact = require('../models/Contact');
+const ContactModel = require('../database/ContactModel');
+const SecurityLogModel = require('../database/SecurityLogModel');
 const { authenticateToken } = require('../middleware/auth');
 
 const router = express.Router();
@@ -87,15 +88,25 @@ router.post('/', contactValidation, async (req, res) => {
     }
 
     const { name, email, subject, message } = req.body;
+    const contactModel = new ContactModel();
+    const securityLogModel = new SecurityLogModel();
 
     // Crear nuevo mensaje
-    const newContact = await Contact.create({
+    const newContact = await contactModel.create({
       name,
       email,
       subject,
       message,
-      ip: req.ip,
-      userAgent: req.get('User-Agent')
+      ip_address: req.ip,
+      user_agent: req.get('User-Agent')
+    });
+
+    // Log de seguridad
+    await securityLogModel.create({
+      event_type: 'contact_form_submission',
+      ip_address: req.ip,
+      user_agent: req.get('User-Agent'),
+      details: `Nuevo mensaje de contacto de ${email}`
     });
 
     res.status(201).json({
@@ -106,7 +117,7 @@ router.post('/', contactValidation, async (req, res) => {
         name: newContact.name,
         email: newContact.email,
         subject: newContact.subject,
-        createdAt: newContact.createdAt
+        created_at: newContact.created_at
       }
     });
 
@@ -166,11 +177,9 @@ router.get('/', authenticateToken, async (req, res) => {
     const limit = parseInt(req.query.limit) || 10;
     const offset = (page - 1) * limit;
 
-    const { contacts, total } = await Contact.findAll({
-      limit,
-      offset,
-      order: [['createdAt', 'DESC']]
-    });
+    const contactModel = new ContactModel();
+    const contacts = await contactModel.getAll(limit, offset);
+    const total = await contactModel.count();
 
     res.json({
       success: true,
@@ -217,7 +226,8 @@ router.get('/', authenticateToken, async (req, res) => {
  */
 router.get('/:id', authenticateToken, async (req, res) => {
   try {
-    const contact = await Contact.findById(req.params.id);
+    const contactModel = new ContactModel();
+    const contact = await contactModel.getById(req.params.id);
     
     if (!contact) {
       return res.status(404).json({
@@ -265,7 +275,8 @@ router.get('/:id', authenticateToken, async (req, res) => {
  */
 router.delete('/:id', authenticateToken, async (req, res) => {
   try {
-    const deleted = await Contact.delete(req.params.id);
+    const contactModel = new ContactModel();
+    const deleted = await contactModel.delete(req.params.id);
     
     if (!deleted) {
       return res.status(404).json({

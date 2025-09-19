@@ -307,3 +307,4 @@
     <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
   </text>
 </svg>
+

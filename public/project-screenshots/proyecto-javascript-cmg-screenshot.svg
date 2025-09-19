@@ -1,0 +1,50 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="250" fill="url(#bg4)" rx="8"/>
+  
+  <!-- Barra de título -->
+  <rect x="0" y="0" width="400" height="40" fill="rgba(255,255,255,0.1)" rx="8"/>
+  
+  <!-- Botones de ventana -->
+  <circle cx="15" cy="20" r="6" fill="#ff5f57"/>
+  <circle cx="35" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="55" cy="20" r="6" fill="#28ca42"/>
+  
+  <!-- Título del proyecto -->
+  <text x="200" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Proyecto JavaScript CMG</text>
+  
+  <!-- Contenido principal -->
+  <rect x="20" y="60" width="360" height="120" fill="rgba(255,255,255,0.1)" rx="4"/>
+  
+  <!-- Console/Editor -->
+  <rect x="30" y="75" width="340" height="25" fill="rgba(0,0,0,0.3)" rx="3"/>
+  <text x="200" y="90" text-anchor="middle" fill="#f59e0b" font-family="Courier New, monospace" font-size="11" font-weight="bold">JavaScript Console</text>
+  
+  <!-- Código -->
+  <text x="40" y="115" fill="#fbbf24" font-family="Courier New, monospace" font-size="10">const data = {</text>
+  <text x="40" y="130" fill="#fbbf24" font-family="Courier New, monospace" font-size="10">  name: "Carolina",</text>
+  <text x="40" y="145" fill="#fbbf24" font-family="Courier New, monospace" font-size="10">  skills: ["JS", "ES6+"]</text>
+  <text x="40" y="160" fill="#fbbf24" font-family="Courier New, monospace" font-size="10">};</text>
+  
+  <!-- Botones de interacción -->
+  <rect x="250" y="115" width="80" height="20" fill="rgba(255,255,255,0.3)" rx="3"/>
+  <text x="290" y="127" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Ejecutar</text>
+  
+  <rect x="250" y="140" width="80" height="20" fill="rgba(255,255,255,0.3)" rx="3"/>
+  <text x="290" y="152" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Reset</text>
+  
+  <!-- Resultado -->
+  <rect x="30" y="170" width="340" height="15" fill="rgba(255,255,255,0.1)" rx="2"/>
+  <text x="200" y="180" text-anchor="middle" fill="#10b981" font-family="Courier New, monospace" font-size="9">Resultado: {name: "Carolina", skills: Array(2)}</text>
+  
+  <!-- Footer -->
+  <rect x="20" y="200" width="360" height="30" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <text x="200" y="218" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="12">JavaScript Avanzado y ES6+</text>
+</svg>

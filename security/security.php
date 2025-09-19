@@ -385,3 +385,4 @@ $security = new PortfolioSecurity();
 // Limpiar datos antiguos
 $security->cleanup();
 ?>
+

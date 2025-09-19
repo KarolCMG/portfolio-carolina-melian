@@ -401,36 +401,40 @@ const portfolioData = {
 
   projects: [
     {
-      name: "Proyecto Final Módulo 4",
-      description: "Proyecto avanzado con integración de múltiples tecnologías y arquitectura moderna. Aplicación web completa con funcionalidades dinámicas y diseño responsivo.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      name: "TechStore - Tienda Online",
+      description: "E-commerce completo con carrito de compras dinámico, sistema de filtros y diseño responsivo. Incluye gestión de productos, carrito persistente y checkout optimizado.",
+      tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage", "Responsive Design"],
       github: "https://github.com/KarolCMG/proyecto-finalmod4",
       demo: null,
-      featured: true
+      featured: true,
+      screenshot: "/project-screenshots-real/techstore-screenshot.png"
     },
     {
-      name: "Trabajo Final HTML/CSS",
-      description: "Proyecto final enfocado en HTML y CSS con diseño moderno, animaciones y mejores prácticas de desarrollo frontend.",
-      tech: ["HTML5", "CSS3", "Animations", "Responsive Design"],
+      name: "Creative Portfolio - Landing Page",
+      description: "Landing page moderna con animaciones CSS avanzadas, efectos parallax y diseño minimalista. Optimizada para conversión y experiencia de usuario.",
+      tech: ["HTML5", "CSS3", "CSS Animations", "Parallax", "Responsive Design"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
       demo: null,
-      featured: true
+      featured: true,
+      screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
     },
     {
-      name: "Final Project",
-      description: "Proyecto final integrador que demuestra el dominio completo de tecnologías web modernas y metodologías de desarrollo.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Modern Web"],
+      name: "DataViz Dashboard",
+      description: "Dashboard interactivo con gráficos dinámicos, tablas de datos y visualizaciones en tiempo real. Interfaz intuitiva para análisis de datos.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Charts.js", "Data Visualization"],
       github: "https://github.com/KarolCMG/final-project",
       demo: null,
-      featured: true
+      featured: true,
+      screenshot: "/project-screenshots-real/dataviz-dashboard-screenshot.png"
     },
     {
-      name: "Proyecto JavaScript CMG",
-      description: "Proyecto especializado en JavaScript con funcionalidades avanzadas, manejo de datos y programación orientada a objetos.",
-      tech: ["JavaScript", "ES6+", "DOM Manipulation", "Data Handling"],
+      name: "TaskMaster - Gestor de Tareas",
+      description: "Aplicación de gestión de tareas con funcionalidades avanzadas: categorización, filtros, búsqueda y persistencia de datos. Interfaz intuitiva y moderna.",
+      tech: ["JavaScript", "ES6+", "DOM Manipulation", "LocalStorage", "CRUD Operations"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
       demo: null,
-      featured: true
+      featured: true,
+      screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
     }
   ],
 
@@ -642,25 +646,14 @@ function createPortfolio() {
           <div class="projects-grid featured-grid">
             ${portfolioData.projects.map(project => `
               <div class="project-card featured-card">
-                <div class="project-badge">
-                  <i class="fas fa-trophy"></i> Proyecto Final
+                <div class="project-screenshot">
+                  <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
                 </div>
-                <div class="project-header">
+                <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
-                  <div class="project-tech">
-                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                  </div>
-                </div>
-                <p class="project-description">${project.description}</p>
-                <div class="project-links">
                   <a href="${project.github}" target="_blank" class="project-link">
                     <i class="fab fa-github"></i> Ver Código
                   </a>
-                  ${project.demo ? `
-                    <a href="${project.demo}" target="_blank" class="project-link">
-                      <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
-                  ` : ''}
                 </div>
               </div>
             `).join('')}

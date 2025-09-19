@@ -4,6 +4,10 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
+// Inicializar base de datos
+const { initDatabase } = require('./database/init');
+const createAdminUser = require('./database/createAdmin');
+
 const contactRoutes = require('./routes/contact');
 const authRoutes = require('./routes/auth');
 const { setupSwagger } = require('./config/swagger');
@@ -81,11 +85,26 @@ app.use('*', (req, res) => {
   });
 });
 
-// Iniciar servidor
-app.listen(PORT, () => {
-  console.log(`🚀 API corriendo en puerto ${PORT}`);
-  console.log(`📚 Documentación disponible en http://localhost:${PORT}/api-docs`);
-  console.log(`🏥 Health check en http://localhost:${PORT}/api/health`);
-});
+// Inicializar base de datos y luego iniciar servidor
+async function startServer() {
+  try {
+    await initDatabase();
+    console.log('✅ Base de datos inicializada correctamente');
+    
+    await createAdminUser();
+    console.log('✅ Usuario administrador verificado/creado');
+    
+    app.listen(PORT, () => {
+      console.log(`🚀 API corriendo en puerto ${PORT}`);
+      console.log(`📚 Documentación disponible en http://localhost:${PORT}/api-docs`);
+      console.log(`🏥 Health check en http://localhost:${PORT}/api/health`);
+    });
+  } catch (error) {
+    console.error('❌ Error inicializando base de datos:', error);
+    process.exit(1);
+  }
+}
+
+startServer();
 
 module.exports = app;

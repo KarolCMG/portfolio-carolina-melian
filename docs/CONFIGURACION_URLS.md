@@ -77,3 +77,4 @@ vercel --prod
 - **Tecnologías**: React, Node.js, Express, SQLite, JWT"
 
 **¡URLs profesionales y funcionales!** 🚀
+

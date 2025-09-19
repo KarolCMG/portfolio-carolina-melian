@@ -128,3 +128,4 @@ if (typeof module !== 'undefined' && module.exports) {
   window.PortfolioAPI = PortfolioAPI;
   window.API_CONFIG = API_CONFIG;
 }
+

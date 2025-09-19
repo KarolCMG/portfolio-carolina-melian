@@ -10,3 +10,4 @@ $csrfToken = bin2hex(random_bytes(32));
 
 echo json_encode(['csrf_token' => $csrfToken]);
 ?>
+

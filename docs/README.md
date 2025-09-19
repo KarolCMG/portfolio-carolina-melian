@@ -180,3 +180,4 @@ Ver [EMAILJS_CONFIGURADO.md](./EMAILJS_CONFIGURADO.md) para la configuración co
 ---
 
 **¡Portfolio completamente funcional y listo para usar!** 🚀
+
