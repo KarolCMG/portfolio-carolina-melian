@@ -405,7 +405,7 @@ const portfolioData = {
       description: "Plataforma de streaming de películas con catálogo completo, sistema de búsqueda avanzada y recomendaciones personalizadas. Interfaz moderna y responsiva para disfrutar del mejor entretenimiento.",
       tech: ["HTML5", "CSS3", "JavaScript", "Movie API", "Responsive Design"],
       github: "https://github.com/KarolCMG/proyecto-finalmod4",
-      demo: "https://movietime-demo.netlify.app",
+      demo: "https://karolcmg.github.io/proyecto-finalmod4",
       featured: true,
       screenshot: "/project-screenshots-real/techstore-screenshot.png"
     },
@@ -414,7 +414,7 @@ const portfolioData = {
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
       tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
-      demo: "https://creative-studio-demo.netlify.app",
+      demo: "https://karolcmg.github.io/trabajo-final-html-css",
       featured: true,
       screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
     },
@@ -423,7 +423,7 @@ const portfolioData = {
       description: "Herramienta profesional de análisis de datos con gráficos interactivos, reportes en tiempo real y exportación de datos. Ideal para empresas que necesitan insights visuales de sus métricas.",
       tech: ["HTML5", "CSS3", "JavaScript", "Chart.js", "Data Export"],
       github: "https://github.com/KarolCMG/final-project",
-      demo: "https://dataviz-pro-demo.netlify.app",
+      demo: "https://karolcmg.github.io/final-project",
       featured: true,
       screenshot: "/project-screenshots-real/dataviz-dashboard-screenshot.png"
     },
@@ -432,7 +432,7 @@ const portfolioData = {
       description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
       tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
-      demo: "https://taskmaster-pro-demo.netlify.app",
+      demo: "https://karolcmg.github.io/proyecto-javaScript-cmg",
       featured: true,
       screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
     }
