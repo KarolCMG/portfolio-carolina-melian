@@ -712,7 +712,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('Elemento #app no encontrado')
   }
-})
 
   // Funcionalidad del menú hamburguesa
   const hamburger = document.querySelector('.hamburger')
