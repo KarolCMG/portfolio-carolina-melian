@@ -410,7 +410,7 @@ const portfolioData = {
       screenshot: "project-screenshots-real/tagama-screenshot.png"
     },
     {
-      name: "TechTrend Innovations",
+      name: "🔥 TechTrend Innovations - SITIO WEB",
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
       tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
