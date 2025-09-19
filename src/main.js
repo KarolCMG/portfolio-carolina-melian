@@ -638,7 +638,9 @@ function createPortfolio() {
             ${portfolioData.projects.map(project => `
               <div class="project-card featured-card">
                 <div class="project-screenshot">
-                  <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
+                  <a href="${project.demo || project.github}" target="_blank" class="screenshot-link">
+                    <img src="${project.screenshot}" alt="Captura de pantalla de ${project.name}" class="screenshot-image">
+                  </a>
                 </div>
                 <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
