@@ -627,7 +627,7 @@ function createPortfolio() {
         <!-- Proyectos Destacados -->
         <div class="featured-projects">
           <h3 class="subsection-title">
-            <i class="fas fa-star"></i> 🚀 MIS PROYECTOS DESPLEGADOS 🚀
+            <i class="fas fa-star"></i> 🚀 MIS PROYECTOS 🚀
           </h3>
           <div class="projects-grid featured-grid">
             ${portfolioData.projects.map(project => `
