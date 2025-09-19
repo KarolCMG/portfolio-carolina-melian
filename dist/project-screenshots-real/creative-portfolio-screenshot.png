@@ -1,0 +1,15 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">
+    Captura de pantalla pendiente
+  </text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">
+    Creative Portfolio - Landing Page
+  </text>
+</svg>

@@ -1,0 +1,114 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="500" fill="url(#bgGradient)" />
+  
+  <!-- Laptop -->
+  <g transform="translate(50, 200)">
+    <!-- Base del laptop -->
+    <rect x="0" y="80" width="300" height="20" rx="10" fill="#2d3748" />
+    
+    <!-- Pantalla del laptop -->
+    <rect x="20" y="0" width="260" height="160" rx="8" fill="#1a202c" stroke="#4a5568" stroke-width="2"/>
+    
+    <!-- Contenido de la pantalla -->
+    <rect x="30" y="10" width="240" height="140" rx="4" fill="url(#screenGradient)" />
+    
+    <!-- Código en la pantalla -->
+    <g fill="#10b981" font-family="monospace" font-size="8">
+      <text x="40" y="25">&lt;div class="portfolio"&gt;</text>
+      <text x="50" y="40">  &lt;h1&gt;Carolina Melián&lt;/h1&gt;</text>
+      <text x="50" y="55">  &lt;p&gt;Frontend Developer&lt;/p&gt;</text>
+      <text x="50" y="70">  &lt;skills&gt;</text>
+      <text x="60" y="85">    JavaScript</text>
+      <text x="60" y="100">    TypeScript</text>
+      <text x="60" y="115">    Angular</text>
+      <text x="60" y="130">    React</text>
+      <text x="50" y="145">&lt;/skills&gt;</text>
+    </g>
+    
+    <!-- Teclado -->
+    <rect x="10" y="100" width="280" height="15" rx="3" fill="#4a5568" />
+    
+    <!-- Teclas -->
+    <g fill="#718096">
+      <rect x="20" y="105" width="8" height="5" rx="1"/>
+      <rect x="30" y="105" width="8" height="5" rx="1"/>
+      <rect x="40" y="105" width="8" height="5" rx="1"/>
+      <rect x="50" y="105" width="8" height="5" rx="1"/>
+      <rect x="60" y="105" width="8" height="5" rx="1"/>
+      <rect x="70" y="105" width="8" height="5" rx="1"/>
+      <rect x="80" y="105" width="8" height="5" rx="1"/>
+      <rect x="90" y="105" width="8" height="5" rx="1"/>
+      <rect x="100" y="105" width="8" height="5" rx="1"/>
+      <rect x="110" y="105" width="8" height="5" rx="1"/>
+      <rect x="120" y="105" width="8" height="5" rx="1"/>
+      <rect x="130" y="105" width="8" height="5" rx="1"/>
+      <rect x="140" y="105" width="8" height="5" rx="1"/>
+      <rect x="150" y="105" width="8" height="5" rx="1"/>
+      <rect x="160" y="105" width="8" height="5" rx="1"/>
+      <rect x="170" y="105" width="8" height="5" rx="1"/>
+      <rect x="180" y="105" width="8" height="5" rx="1"/>
+      <rect x="190" y="105" width="8" height="5" rx="1"/>
+      <rect x="200" y="105" width="8" height="5" rx="1"/>
+      <rect x="210" y="105" width="8" height="5" rx="1"/>
+      <rect x="220" y="105" width="8" height="5" rx="1"/>
+      <rect x="230" y="105" width="8" height="5" rx="1"/>
+      <rect x="240" y="105" width="8" height="5" rx="1"/>
+      <rect x="250" y="105" width="8" height="5" rx="1"/>
+      <rect x="260" y="105" width="8" height="5" rx="1"/>
+      <rect x="270" y="105" width="8" height="5" rx="1"/>
+    </g>
+  </g>
+  
+  <!-- Silueta de persona programando -->
+  <g transform="translate(150, 50)">
+    <!-- Cabeza -->
+    <circle cx="50" cy="30" r="25" fill="#f7fafc" />
+    
+    <!-- Cabello -->
+    <path d="M25 15 Q50 5 75 15 Q75 25 70 30 Q50 20 30 30 Q25 25 25 15" fill="#2d3748" />
+    
+    <!-- Cuerpo -->
+    <rect x="35" y="55" width="30" height="40" rx="15" fill="#4a5568" />
+    
+    <!-- Brazos -->
+    <rect x="20" y="60" width="15" height="25" rx="7" fill="#f7fafc" />
+    <rect x="65" y="60" width="15" height="25" rx="7" fill="#f7fafc" />
+    
+    <!-- Manos en el teclado -->
+    <circle cx="27" cy="85" r="5" fill="#f7fafc" />
+    <circle cx="73" cy="85" r="5" fill="#f7fafc" />
+  </g>
+  
+  <!-- Elementos decorativos -->
+  <g opacity="0.3">
+    <!-- Código flotante -->
+    <text x="20" y="50" fill="white" font-family="monospace" font-size="12" opacity="0.5">const</text>
+    <text x="320" y="80" fill="white" font-family="monospace" font-size="10" opacity="0.5">function</text>
+    <text x="30" y="450" fill="white" font-family="monospace" font-size="8" opacity="0.5">return</text>
+    <text x="350" y="420" fill="white" font-family="monospace" font-size="9" opacity="0.5">export</text>
+    
+    <!-- Iconos de tecnología -->
+    <circle cx="80" cy="120" r="3" fill="#10b981" opacity="0.6"/>
+    <circle cx="320" cy="150" r="3" fill="#3b82f6" opacity="0.6"/>
+    <circle cx="60" cy="400" r="3" fill="#f59e0b" opacity="0.6"/>
+    <circle cx="340" cy="380" r="3" fill="#ef4444" opacity="0.6"/>
+  </g>
+  
+  <!-- Texto profesional -->
+  <text x="200" y="480" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Carolina Melián - Desarrolladora Frontend
+  </text>
+</svg>

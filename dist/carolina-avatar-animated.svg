@@ -1,0 +1,309 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo dinámico -->
+  <rect width="400" height="500" fill="url(#bgGradient)">
+    <animateTransform attributeName="transform" type="rotate" values="0 200 250;360 200 250" dur="30s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Elementos de código flotantes -->
+  <g opacity="0.8">
+    <!-- Elemento 1: const -->
+    <g transform="translate(50, 80)">
+      <rect x="-30" y="-12" width="60" height="25" rx="12" fill="rgba(99, 102, 241, 0.3)" stroke="#6366f1" stroke-width="2" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-20; 0,0" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="0" y="3" text-anchor="middle" fill="#6366f1" font-family="monospace" font-size="12" font-weight="bold">const</text>
+    </g>
+    
+    <!-- Elemento 2: function -->
+    <g transform="translate(350, 120)">
+      <rect x="-35" y="-12" width="70" height="25" rx="12" fill="rgba(236, 72, 153, 0.3)" stroke="#ec4899" stroke-width="2" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,15; 0,0" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="0" y="3" text-anchor="middle" fill="#ec4899" font-family="monospace" font-size="12" font-weight="bold">function</text>
+    </g>
+    
+    <!-- Elemento 3: return -->
+    <g transform="translate(80, 400)">
+      <rect x="-32" y="-12" width="65" height="25" rx="12" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -15,0; 0,0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="0" y="3" text-anchor="middle" fill="#06b6d4" font-family="monospace" font-size="12" font-weight="bold">return</text>
+    </g>
+    
+    <!-- Elemento 4: export -->
+    <g transform="translate(320, 450)">
+      <rect x="-35" y="-12" width="70" height="25" rx="12" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" stroke-width="2" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 15,0; 0,0" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="0" y="3" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">export</text>
+    </g>
+  </g>
+  
+  <!-- Avatar de Carolina con movimiento -->
+  <g transform="translate(200, 250)">
+    <!-- Cabeza -->
+    <ellipse cx="0" cy="-50" rx="45" ry="50" fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Cabello/Diadema azul oscuro -->
+    <ellipse cx="0" cy="-60" rx="50" ry="15" fill="#1e293b" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" values="0;5;0;-5;0" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Ojos marrones -->
+    <ellipse cx="-15" cy="-55" rx="8" ry="6" fill="#8b4513" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="15" cy="-55" rx="8" ry="6" fill="#8b4513" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Puntos blancos en los ojos (brillo) -->
+    <circle cx="-12" cy="-58" r="2" fill="#ffffff">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="18" cy="-58" r="2" fill="#ffffff">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Cejas -->
+    <path d="M -25 -65 Q -15 -70 -5 -65" stroke="#1e293b" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 5 -65 Q 15 -70 25 -65" stroke="#1e293b" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Sonrisa -->
+    <path d="M -15 -35 Q 0 -25 15 -35" stroke="#e53e3e" stroke-width="3" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Cuerpo -->
+    <ellipse cx="0" cy="20" rx="35" ry="45" fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="scale" values="1;1.02;1" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Camiseta azul oscura -->
+    <ellipse cx="0" cy="15" rx="30" ry="35" fill="#1e293b" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="scale" values="1;1.03;1" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Botón en la camiseta -->
+    <circle cx="0" cy="10" r="4" fill="#ffffff" stroke="#1e293b" stroke-width="1">
+      <animate attributeName="r" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="10" r="1" fill="#1e293b">
+      <animate attributeName="r" values="1;1.5;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Brazos -->
+    <ellipse cx="-25" cy="5" rx="12" ry="25" fill="#ffffff" transform="rotate(-20 -25 5)">
+      <animateTransform attributeName="transform" type="rotate" values="-20 -25 5;-25 -25 5;-20 -25 5" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="25" cy="5" rx="12" ry="25" fill="#ffffff" transform="rotate(20 25 5)">
+      <animateTransform attributeName="transform" type="rotate" values="20 25 5;25 25 5;20 25 5" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Manos -->
+    <circle cx="-35" cy="25" r="6" fill="#ffffff">
+      <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="35" cy="25" r="6" fill="#ffffff">
+      <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Laptop moderno -->
+  <g transform="translate(50, 350)">
+    <!-- Base del laptop -->
+    <rect x="0" y="40" width="200" height="15" rx="8" fill="#2d3748" />
+    
+    <!-- Pantalla del laptop -->
+    <rect x="10" y="0" width="180" height="120" rx="8" fill="#1a202c" stroke="#4a5568" stroke-width="2"/>
+    
+    <!-- Contenido de la pantalla -->
+    <rect x="20" y="10" width="160" height="100" rx="4" fill="#0f172a" />
+    
+    <!-- Código en la pantalla -->
+    <g fill="#10b981" font-family="monospace" font-size="8">
+      <text x="30" y="25">&lt;div class="portfolio"&gt;</text>
+      <text x="35" y="40">  &lt;h1&gt;Carolina&lt;/h1&gt;</text>
+      <text x="35" y="55">  &lt;p&gt;Frontend Dev&lt;/p&gt;</text>
+      <text x="35" y="70">  &lt;skills&gt;</text>
+      <text x="40" y="85">    JS, TS, React</text>
+      <text x="35" y="100">&lt;/skills&gt;</text>
+    </g>
+    
+    <!-- Cursor parpadeante -->
+    <rect x="140" y="105" width="2" height="8" fill="#10b981">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Teclado -->
+    <rect x="5" y="50" width="190" height="12" rx="3" fill="#4a5568" />
+    
+    <!-- Teclas con efecto de pulsación -->
+    <g fill="#718096">
+      <rect x="10" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="20" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="30" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="40" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="50" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.9s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="60" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="70" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.7s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="80" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="90" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="100" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="110" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="120" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="130" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="140" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.7s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="150" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="160" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="170" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="180" y="54" width="8" height="4" rx="1">
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2.9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Iconos de tecnología con movimiento -->
+  <g opacity="0.9">
+    <!-- Icono JavaScript -->
+    <g transform="translate(80, 120)">
+      <circle r="8" fill="#f7df1e" filter="url(#strongGlow)">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="3" text-anchor="middle" fill="#000" font-family="Arial" font-size="10" font-weight="bold">JS</text>
+    </g>
+    
+    <!-- Icono TypeScript -->
+    <g transform="translate(320, 150)">
+      <circle r="8" fill="#3178c6" filter="url(#strongGlow)">
+        <animateTransform attributeName="transform" type="rotate" values="360;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="3" text-anchor="middle" fill="#fff" font-family="Arial" font-size="8" font-weight="bold">TS</text>
+    </g>
+    
+    <!-- Icono Angular -->
+    <g transform="translate(60, 400)">
+      <circle r="8" fill="#dd0031" filter="url(#strongGlow)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="3" text-anchor="middle" fill="#fff" font-family="Arial" font-size="8" font-weight="bold">A</text>
+    </g>
+    
+    <!-- Icono React -->
+    <g transform="translate(340, 380)">
+      <circle r="8" fill="#61dafb" filter="url(#strongGlow)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="3" text-anchor="middle" fill="#000" font-family="Arial" font-size="8" font-weight="bold">R</text>
+    </g>
+  </g>
+  
+  <!-- Partículas flotantes -->
+  <g opacity="0.7">
+    <circle cx="100" cy="100" r="3" fill="#6366f1" filter="url(#glow)">
+      <animate attributeName="cy" values="100;80;100" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="100;110;100" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="3" fill="#ec4899" filter="url(#glow)">
+      <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="300;290;300" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="350" r="3" fill="#06b6d4" filter="url(#glow)">
+      <animate attributeName="cy" values="350;330;350" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="150;160;150" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="300" r="3" fill="#10b981" filter="url(#glow)">
+      <animate attributeName="cy" values="300;280;300" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="250;240;250" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="250" r="3" fill="#f59e0b" filter="url(#glow)">
+      <animate attributeName="cy" values="250;230;250" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="80;90;80" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Líneas de conexión dinámicas -->
+  <g opacity="0.6" stroke-width="2">
+    <line x1="100" y1="100" x2="150" y2="200" stroke="#6366f1" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="200" x2="250" y2="200" stroke="#ec4899" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="350" x2="200" y2="350" stroke="#06b6d4" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Texto profesional con efecto de brillo -->
+  <text x="200" y="480" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" filter="url(#glow)">
+    Carolina Melián - Desarrolladora Frontend
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+  </text>
+</svg>
