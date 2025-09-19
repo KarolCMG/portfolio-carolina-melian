@@ -407,7 +407,7 @@ const portfolioData = {
       github: "https://github.com/KarolCMG/final-project",
       demo: "https://tagama.vercel.app/",
       featured: true,
-      screenshot: "/project-screenshots-real/tagama-screenshot.png"
+      screenshot: "project-screenshots-real/tagama-screenshot.png"
     },
     {
       name: "TechTrend Innovations",
@@ -416,7 +416,7 @@ const portfolioData = {
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
       demo: "https://techtrend-innovations.netlify.app/",
       featured: true,
-      screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
+      screenshot: "project-screenshots-real/creative-portfolio-screenshot.png"
     },
     {
       name: "Licata Adventures",
@@ -425,7 +425,7 @@ const portfolioData = {
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
       demo: "https://licata-adventures.netlify.app/",
       featured: true,
-      screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
+      screenshot: "project-screenshots-real/taskmaster-screenshot.png"
     }
   ],
 
