@@ -637,10 +637,6 @@ function createPortfolio() {
               <div class="project-card featured-card">
                 <div class="project-info">
                   <h3 class="project-title">${project.name}</h3>
-                  <p class="project-description">${project.description}</p>
-                  <div class="project-tech">
-                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                  </div>
                   <div class="project-links">
                     ${project.demo ? `
                       <a href="${project.demo}" target="_blank" class="project-link demo-link">

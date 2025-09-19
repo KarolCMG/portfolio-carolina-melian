@@ -761,14 +761,19 @@ section {
 
 /* Información del proyecto */
 .project-info {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
 }
 
 .project-title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
   color: var(--text-primary);
 }
 
