@@ -27,6 +27,15 @@ app.use(limiter);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+// Servir archivos estáticos
+app.use(express.static('public'));
+app.use(express.static('src'));
+
+// Servir el archivo HTML principal
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
 // Ruta de salud
 app.get('/api/health', (req, res) => {
   res.json({
@@ -34,20 +43,6 @@ app.get('/api/health', (req, res) => {
     message: 'Portfolio API funcionando correctamente',
     timestamp: new Date().toISOString(),
     version: '1.0.0'
-  });
-});
-
-// Ruta raíz
-app.get('/', (req, res) => {
-  res.json({
-    message: '🚀 API del Portfolio de Carolina Melián',
-    version: '1.0.0',
-    endpoints: {
-      health: '/api/health',
-      contact: '/api/contact',
-      auth: '/api/auth',
-      docs: '/api-docs'
-    }
   });
 });
 
