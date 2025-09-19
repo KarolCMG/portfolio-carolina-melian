@@ -401,36 +401,36 @@ const portfolioData = {
 
   projects: [
     {
-      name: "TechStore - Tienda Online",
-      description: "E-commerce completo con carrito de compras dinámico, sistema de filtros y diseño responsivo. Incluye gestión de productos, carrito persistente y checkout optimizado.",
-      tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage", "Responsive Design"],
+      name: "MovieTime - Tu Cine en Casa",
+      description: "Plataforma de streaming de películas con catálogo completo, sistema de búsqueda avanzada y recomendaciones personalizadas. Interfaz moderna y responsiva para disfrutar del mejor entretenimiento.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Movie API", "Responsive Design"],
       github: "https://github.com/KarolCMG/proyecto-finalmod4",
       demo: null,
       featured: true,
       screenshot: "/project-screenshots-real/techstore-screenshot.png"
     },
     {
-      name: "Creative Portfolio - Landing Page",
-      description: "Landing page moderna con animaciones CSS avanzadas, efectos parallax y diseño minimalista. Optimizada para conversión y experiencia de usuario.",
-      tech: ["HTML5", "CSS3", "CSS Animations", "Parallax", "Responsive Design"],
+      name: "Creative Studio - Diseño & Desarrollo",
+      description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
+      tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
       demo: null,
       featured: true,
       screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
     },
     {
-      name: "DataViz Dashboard",
-      description: "Dashboard interactivo con gráficos dinámicos, tablas de datos y visualizaciones en tiempo real. Interfaz intuitiva para análisis de datos.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Charts.js", "Data Visualization"],
+      name: "DataViz Pro - Analytics Dashboard",
+      description: "Herramienta profesional de análisis de datos con gráficos interactivos, reportes en tiempo real y exportación de datos. Ideal para empresas que necesitan insights visuales de sus métricas.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Chart.js", "Data Export"],
       github: "https://github.com/KarolCMG/final-project",
       demo: null,
       featured: true,
       screenshot: "/project-screenshots-real/dataviz-dashboard-screenshot.png"
     },
     {
-      name: "TaskMaster - Gestor de Tareas",
-      description: "Aplicación de gestión de tareas con funcionalidades avanzadas: categorización, filtros, búsqueda y persistencia de datos. Interfaz intuitiva y moderna.",
-      tech: ["JavaScript", "ES6+", "DOM Manipulation", "LocalStorage", "CRUD Operations"],
+      name: "TaskMaster Pro - Organiza tu Vida",
+      description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
+      tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
       demo: null,
       featured: true,
