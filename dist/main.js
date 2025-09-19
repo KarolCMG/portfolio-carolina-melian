@@ -704,7 +704,7 @@ function createPortfolio() {
   `
 }
 
-// Inicializar el portfolio cuando el DOM esté listo
+// Inicializar el portfolio cuando el DOM esté listo - FIXED
 document.addEventListener('DOMContentLoaded', () => {
   const appElement = document.querySelector('#app')
   if (appElement) {
