@@ -696,7 +696,7 @@ function createPortfolio() {
   `
 }
 
-// Inicializar el portfolio cuando el DOM esté listo - FIXED
+// Inicializar el portfolio cuando el DOM esté listo - TECH REMOVED
 document.addEventListener('DOMContentLoaded', () => {
   const appElement = document.querySelector('#app')
   if (appElement) {
