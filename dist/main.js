@@ -401,38 +401,29 @@ const portfolioData = {
 
   projects: [
     {
-      name: "MovieTime - Tu Cine en Casa",
-      description: "Plataforma de streaming de películas con catálogo completo, sistema de búsqueda avanzada y recomendaciones personalizadas. Interfaz moderna y responsiva para disfrutar del mejor entretenimiento.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Movie API", "Responsive Design"],
-      github: "https://github.com/KarolCMG/proyecto-finalmod4",
-      demo: "https://karolcmg.github.io/proyecto-finalmod4",
+      name: "Tagama - Conectando Experiencias Creativas",
+      description: "Plataforma web que conecta personas en Tenerife con experiencias creativas reales, cercanas y accesibles. Encuentra tu tribu y desarrolla nuevas habilidades en un entorno comunitario.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Vercel", "Responsive Design"],
+      github: "https://github.com/KarolCMG/final-project",
+      demo: "https://tagama.vercel.app/",
       featured: true,
-      screenshot: "/project-screenshots-real/techstore-screenshot.png"
+      screenshot: "/project-screenshots-real/tagama-screenshot.png"
     },
     {
       name: "Creative Studio - Diseño & Desarrollo",
       description: "Agencia creativa especializada en diseño web y desarrollo de marcas. Portfolio interactivo con animaciones fluidas, galería de proyectos y formulario de contacto integrado.",
       tech: ["HTML5", "CSS3", "CSS Animations", "Smooth Scrolling", "Contact Forms"],
       github: "https://github.com/KarolCMG/trabajo-final-html-css",
-      demo: "https://karolcmg.github.io/trabajo-final-html-css",
+      demo: null,
       featured: true,
       screenshot: "/project-screenshots-real/creative-portfolio-screenshot.png"
-    },
-    {
-      name: "DataViz Pro - Analytics Dashboard",
-      description: "Herramienta profesional de análisis de datos con gráficos interactivos, reportes en tiempo real y exportación de datos. Ideal para empresas que necesitan insights visuales de sus métricas.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Chart.js", "Data Export"],
-      github: "https://github.com/KarolCMG/final-project",
-      demo: "https://karolcmg.github.io/final-project",
-      featured: true,
-      screenshot: "/project-screenshots-real/dataviz-dashboard-screenshot.png"
     },
     {
       name: "TaskMaster Pro - Organiza tu Vida",
       description: "Aplicación de productividad personal con gestión inteligente de tareas, recordatorios automáticos y análisis de productividad. Diseñada para maximizar la eficiencia personal y profesional.",
       tech: ["JavaScript", "ES6+", "LocalStorage", "Drag & Drop", "Priority System"],
       github: "https://github.com/KarolCMG/proyecto-javaScript-cmg",
-      demo: "https://karolcmg.github.io/proyecto-javaScript-cmg",
+      demo: null,
       featured: true,
       screenshot: "/project-screenshots-real/taskmaster-screenshot.png"
     }
@@ -441,7 +432,7 @@ const portfolioData = {
   experience: {
     practice: "6+ meses",
     dailyCoding: "Práctica diaria de programación",
-    projects: "4 proyectos destacados",
+    projects: "3 proyectos destacados",
     learning: "Continuo aprendizaje de nuevas tecnologías"
   },
 
